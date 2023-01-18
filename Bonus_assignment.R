@@ -15,3 +15,25 @@ for (i in 1:9) {
 P_A = SizeOfA/SizeOfS
 
 print(P_A)
+
+
+# Simulation
+N = 10000            # loop 1000 times
+occur_i = 0          # Number of times the correct sample is given
+
+for (i in 1:N) {
+    match = FALSE
+    samples = sample(1:10, 10)
+    for (i in samples) {
+        if (samples[i] == i) {
+            match = TRUE
+        }
+    }
+    if (match) {
+        occur_i = occur_i + 1
+    }
+}
+
+occur = N - occur_i
+P_A = occur/N
+print(P_A)
