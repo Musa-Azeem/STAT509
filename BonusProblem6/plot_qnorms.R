@@ -1,5 +1,3 @@
-library('pracma')
-
 alpha = 0.05;
 
 # k = linspace(0, 0.5, 100);
